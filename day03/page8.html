@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 가로, 세로를 실수로 입력받으세요
+        //   사각형을 면적을 구해서 출력(가로 * 세로)
+        garo = prompt("가로의 길이 : ")
+        rero = prompt("세로의 길이 : ")
+        result = parseFloat(garo) * parseFloat(rero)
+        alert("사각형의 면적 : " + result)
+
+        //2. 커피한잔 가격, 커피구매 갯수를 입력
+        //   전체 결제금액을 구해서 출력
+        pay = prompt("커피의 가격 : ")
+        quantity = prompt("구입한 커피는 몇 잔?")
+        result2 = parseInt(pay) * parseInt(quantity)
+        alert("구입한 커피 결제금액 : " + result2 + "원")
+
+        //3. 사과의 가격이 2000, 배의 가격이 3000
+        //   사과 구매 개수 3, 배 구매 개수 2
+        //   전체 결제 금액은?
+        // const PRICE2 = 2000 //변경불가능한 값을 넣을 때, 상수
+        // const PRICE3 = 3000 //변경불가능한 값을 넣을 때, 상수
+        // apple = 2000
+        // pear = 3000
+        // // result3 = apple * 3 + pear * 2
+        // // apple_total = apple * PRICE2
+        // // pear_total = pear * PRICE3
+        // alert("과일 전체 결제 금액 : " + result3 + "원")
+
+        //4. 어제 온도 25도, 오늘 온도 10도
+        //   어제와 오늘 온도의 평균은?
+        yesterday = 25
+        today = 10
+        const COUNT2 = 2
+        alert("어제와 오늘 온도의 평균 : " + (yesterday + today) / COUNT2 + "도")
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

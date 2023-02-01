@@ -1,0 +1,13 @@
+body {
+    background: red;
+}
+a {
+    color: white;
+    width: 200px;
+    height: 100px;
+    background-color: lime;
+}
+/* 
+    []- 대괄호, {}-중괄호, ()- 소괄호  
+    : - 콜론, ; - 세미콜론
+ */

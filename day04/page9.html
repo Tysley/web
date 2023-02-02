@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hi(){
+            alert("화이팅!")
+        }
+        function bye(){
+            alert('드디어 끝났어요')
+        }
+        function check(){
+            id = "root"
+            pw = "1234"
+            
+            id2 = document.getElementById('id2').value
+            pw2 = document.getElementById('pw2').value
+            result = document.getElementById('result')
+            //id 일치 pw 일치시 로그인 성공
+            if(id == id2 && pw == pw2){
+                //alert("로그인 성공!")
+                result.innerHTML = "<font color=green>로그인 성공!</font><img src ='ok.jpg' width=100 height=100>"
+            }else{
+                result.innerHTML = "<font color=red>로그인 실패...</font><img src ='no.png' width=100 height=100>"
+            }
+        }
+        function idcheck(){
+            id = document.getElementById('id2').value
+            if(id.length < 5){
+                alert("아이디는 최소 5글자 이상이여야 합니다!")
+            }            
+        }
+        function passcheck(){
+            pw2 = document.getElementById('pw2').value
+            pw3 = document.getElementById('pw3').value
+            if(pw2 == pw3){
+                result.innerHTML = "<font color=blue>비밀번호 일치!</font>"
+            }else{
+                result.innerHTML = "<font color=red>비밀번호 불일치!</font>"
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="hi()">인사처리</button>
+    <button onclick="bye()">안녕처리</button>
+    <hr color = "red">
+    아이디 : <input type="text" id="id2" value="root"><button onclick="idcheck()">글자수 체크</button><br> 
+    패스워드 : <input type="password" id="pw2" value="1234"><br>
+    패스워드 : <input type="password" id="pw3" value="1234"><button onclick="passcheck()">비밀번호 체크</button><br>
+    <button onclick="check()">로그인</button> <br>
+    <div id="result">
+        결과 들어갈 곳
+    </div>
+</body>
+</html>

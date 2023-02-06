@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Director (Year)',  '제임스', '유나'],
+          ['5분 미만', 8.4,         7.9],
+          ['5분이상 10분미만',     6.9,         6.5],
+          ['10분이상 20분미만',        6.5,         6.4],
+          ['20분이상',      4.4,         6.2]
+        ]);
+
+        var options = {
+          title: '평균 유튜브 시청 횟수',
+          vAxis: {title: '시청 횟수'},
+          isStacked: true
+        };
+
+        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

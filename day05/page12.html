@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Selectmenu - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+    fieldset {
+      border: 0;
+    }
+    label {
+      display: block;
+      margin: 30px 0 0 0;
+    }
+    .overflow {
+      height: 200px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#speed" ).selectmenu();
+ 
+    $( "#files" ).selectmenu();
+ 
+    $( "#number" )
+      .selectmenu()
+      .selectmenu( "menuWidget" )
+        .addClass( "overflow" );
+ 
+    $( "#salutation" ).selectmenu();
+  } );
+  </script>
+</head>
+<body>
+ 
+<div class="demo">
+ 
+<form action="#">
+ 
+  <fieldset>
+    <label for="speed">오늘의 점심메뉴</label>
+    <select name="speed" id="speed">
+      <option>자장면</option>
+      <option>치킨</option>
+      <option selected="selected">햄버거</option>
+      <option>라면</option>
+      <option>볶음밥</option>
+    </select>
+ 
+    <label for="files">간식 뭐 먹을까?</label>
+    <select name="files" id="files">
+      <optgroup label="달달한 것 ">
+        <option value="jquery">쿠키</option>
+        <option value="jqueryui">초콜렛</option>
+      </optgroup>
+      <optgroup label="Other files">
+        <option value="somefile">Some unknown file</option>
+        <option value="someotherfile">Some other file with a very long option text</option>
+      </optgroup>
+    </select>
+ 
+    <label for="number">오늘은 무슨 요일?</label>
+    <select name="number" id="number">
+      <option>월요일</option>
+      <option selected="selected">화요일</option>
+      <option>수요일</option>
+      <option>목요일</option>
+      <option>금요일</option>
+      <option>토요일</option>
+      <option>일요일</option>
+    </select>
+ 
+    <label for="salutation">당신의 성별은?</label>
+    <select name="salutation" id="salutation">
+      <option disabled selected>반드시 하나를 선택하세요</option>
+      <option>남자</option>
+      <option>여자</option>
+    </select>
+  </fieldset>
+ 
+</form>
+ 
+</div>
+ 
+ 
+</body>
+</html>
